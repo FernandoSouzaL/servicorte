@@ -1,0 +1,35 @@
+.c-contact {
+    display: flex;
+    grid-gap: 40px 95px;
+
+    @include below($sm-max) {
+        flex-direction: column;
+    }
+
+    &__item {
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        table {
+            margin: 0;
+        }
+
+        tr {
+            @include below($xs-max) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        td {
+            border: 0;
+            font-size: clamp(14px, 2vw, 18px);
+            color: $text-color;
+            padding: 0;
+            padding: 0 30px;
+            padding-left: 0;
+            padding-bottom: 30px;
+        }
+    }
+}

@@ -1,10 +1,95 @@
 .c-footer {
-  background: $black;
+  background: $white;
   display: inline-block;
   width: 100%;
+  padding-top: clamp(50px, 7vw, 70px);
+  padding-bottom: 40px;
+  position: relative;
+  border-top: 1px solid #DEE4EB;
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    transform: translateY(-20px);
+    position: absolute;
+    right: 13.38541666666667%;
+    top: 0;
+    z-index: 2;
+
+    @include above($sm) {
+      width: 80px;
+      height: 80px;
+      transform: translateY(-40px);
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px clamp(30px, 18vw, 175px);
+    
+    @include above($md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+
+    &--secondary {
+      @include below($sm-max) {
+        order: 2;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    @include below($sm-max) {
+      align-items: flex-start;
+    }
+
+    p {
+      @include below($sm-max) {
+        text-align: left;
+      }
+    }
+  }
+
+  &__sales {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  &__contact {
+    margin: 0;    
+  }
 
   &__copyright {
-    margin: 2em 0;
+    margin: 0;
+
+    @include below($sm-max) {
+      text-align: center;
+    }
 
     img {
       top: 0;

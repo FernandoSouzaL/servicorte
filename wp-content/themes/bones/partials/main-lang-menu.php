@@ -8,10 +8,9 @@
 
         <li class="c-menu__icon">
             <a href="<?= $menu->url; ?>">
-                <svg width="30" height="30">
-                    <title><?= $menu->title; ?></title>
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?= $menu->title; ?>" />
-                </svg> 
+                <picture>
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/<?= $menu->title; ?>.png" alt="<?= $menu->title; ?>">
+                </picture>
             </a>
         </li>
 

@@ -1,0 +1,30 @@
+.c-map {
+    position: relative;
+
+    iframe {
+        width: 100%;
+        height: 700px;
+    }
+
+    &__content {
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background-color: $color-secondary;
+        padding: clamp(20px, 10vw, 100px) clamp(20px, 5vw, 50px);
+
+        @include above($md) {
+            left: 13.54166666666667%;
+        }
+
+        @include below(425px) {
+            width: 78%;
+        }
+
+        h3 {
+            margin-bottom: 30px;
+        }
+    }
+}

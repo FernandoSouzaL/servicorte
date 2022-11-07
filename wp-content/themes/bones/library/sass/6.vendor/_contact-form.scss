@@ -55,8 +55,18 @@
   }
 }
 
+.wpcf7-not-valid-tip {
+  margin-top: 10px;
+}
+
+.wpcf7-response-output {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .wpcf7-spinner {
-  background-color: $gray !important;
+  background-color: transparent !important;
   margin: 1em auto;
   display: flex;
 

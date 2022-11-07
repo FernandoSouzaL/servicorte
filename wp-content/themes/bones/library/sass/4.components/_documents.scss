@@ -1,0 +1,33 @@
+.c-documents {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    margin-top: clamp(40px, 8vw, 80px);
+
+    &__item {
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        justify-content: space-between;
+        grid-gap: 15px;
+        flex-direction: column;
+        
+        @include above($sm) {
+            border: 2px solid #E8E8E8;
+            padding-left: 30px;
+            flex-direction: row;
+        }
+
+        .o-btn {
+            box-sizing: border-box;
+            
+            @include above($sm) {
+                width: 160px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

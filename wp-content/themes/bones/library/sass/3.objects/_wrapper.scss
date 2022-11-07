@@ -3,5 +3,8 @@
   padding: 0 5%;
   box-sizing: border-box;
 
-  @include wrapper(1280, 5);
+  @include wrapper(1400, 5);
+  @include wrapper(1230, 5);
+  @include wrapper(1200, 5);
+  @include wrapper(1050, 5);
 }

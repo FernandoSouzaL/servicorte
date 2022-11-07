@@ -1,0 +1,17 @@
+.c-product {
+    h2 {
+        margin-bottom: clamp(20px, 4vw, 40px);
+        margin-top: clamp(20px, 4vw, 40px);
+        font-family: $font-secondary;
+        font-size: clamp(30px, 4vw, 40px);
+        font-weight: 800;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        font-size: clamp(18px, 3vw, 23px);
+    }
+}

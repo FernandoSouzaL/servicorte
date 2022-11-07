@@ -1,8 +1,8 @@
 // Colors
-$color-primary:     #000000;
-$color-secondary:   #FFFFFF;
+$color-primary:     #242021;
+$color-secondary:   #F6821F;
 
-$gray:              #f4f4f4;
+$gray:              #F5F5F5;
 $white:             #FFFFFF;
 $black:             #000000;
 
@@ -18,14 +18,14 @@ $btn-color-primary:   $color-secondary;
 
 
 // Typography
-$font-primary:        'Product sans', sans-serif;
-$font-secondary:      '', sans-serif;
+$font-primary:        'Roboto', sans-serif;
+$font-secondary:      'Montserrat', sans-serif;
 
 
 
 // Behaviour
 $transition-default:     all .2s ease-out;
-$transition-animations:  all .7s ease-out;
+$transition-animated:    all .5s ease-out;
 
 
 

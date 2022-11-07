@@ -1,0 +1,30 @@
+.c-menu-page {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    grid-gap: 20px 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+        &--current {
+            font-size: 18px;
+            font-weight: 500;
+            color: $text-color;
+            padding: 0 3px;
+            border-bottom: 7px solid $color-secondary;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color;
+        padding: 0 3px;
+        border-bottom: 7px solid transparent;
+
+        &:hover {
+            border-color: $color-secondary;
+        }
+    }
+}

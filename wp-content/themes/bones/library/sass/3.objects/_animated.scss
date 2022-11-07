@@ -1,0 +1,17 @@
+.appear-in {
+    opacity: 0;
+    transition: $transition-animated;
+
+    &-top {
+        transform: translateY(50%);
+    }
+
+    &-time {
+        @include time(.1, 15)
+    }
+
+    .is-visible & {
+        opacity: 1;
+        transform: none;
+    }
+}

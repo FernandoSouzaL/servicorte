@@ -25,31 +25,53 @@
 }
 
 .swiper-button {
+  width: 40px;
+  height: 40px;
+  background-color: rgba($color-primary, .8);
   display: flex;
   justify-content: center;
   align-items: center;
   color: $white;
   top: 50%;
-  transform: translateY(-50%);
   position: absolute;
   z-index: 9;
   cursor: pointer;
   transition: $transition-default;
+  overflow: hidden;
+  border-radius: 50%;
 
-  @include below($xs-max) {
-    display: none;
+  @include above($sm +1) {
+    width: 80px;
+    height: 80px;
+  }
+
+  svg {
+    @include below($sm) {
+      width: 9px;
+      height: 17px;
+    }
   }
 
   &-next {
-    right: 2%;
+    right: 0;
+    transform: translate(10px, -50%);
+
+    @include above($sm +1) {
+      transform: translate(40px, -50%);
+    }
   }
   
   &-prev {
-    left: 2%;
+    left: 0;
+    transform: translate(-10px, -50%);
+
+    @include above($sm +1) {
+      transform: translate(-40px, -50%);
+    }
   }
 
   &:hover {
-    color: $link-hover-color;
+    background-color: $color-secondary;
   }
 
   &:first-child {
@@ -67,31 +89,49 @@
 }
 
 .swiper-pagination {
-  display: none;
   text-align: center;
   transition: $transition-default;
-  width: 100%;
-  margin-top: 20px;
+  position: absolute;
+  left: 13.54166666666667%;
+  bottom: clamp(30px, 10vw, 100px);
+  z-index: 3;
 
-  @include below($xs-max) {
-    display: block;
+  @include below($md) {
+    bottom: 30px;
   }
 
   &-lock {
     display: none;
   }
+
+  &-orange {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+
+    @include above($sm) {
+      bottom: 60px;
+    }
+    
+    .swiper-pagination-bullet-active {
+      background-color: $color-secondary;
+      border-color: $color-secondary;
+    }
+  }
  
   &-bullet {
-    width: 10px;
-    height: 10px;
+    width: 38px;
+    height: 8px;
+    border: 1px solid $white;
     display: inline-block;
-    border-radius: 50%;
-    background: $color-primary;
+    border-radius: 5px;
+    background: transparent;
     margin: 0 4px;
-    opacity: .6;
+    cursor: pointer;
     
     &-active {
-      opacity: 1;
+      background-color: $white;
+      cursor: auto;
     }
   }
 }

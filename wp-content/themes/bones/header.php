@@ -38,23 +38,26 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery.maskedinput.js"></script>
 	
 		<!-- swipper -->
-		<script src="<?php echo get_template_directory_uri(); ?>/library/swiper/dist/js/swiper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
 	</head>
 
-	<body <?php body_class(); ?> >
+	<body id="go-top" <?php body_class(); ?>>
 
 		<header class="c-header js-header">
 
-			<div class="o-wrapper o-wrapper--1280">
+			<div class="o-wrapper o-wrapper--1400">
 				<div class="c-header__container">
 		
 					<p class="c-header__logo">
 						<a href="<?php echo home_url(); ?>" rel="nofollow">
-							<svg width="184" height="63">
+							<svg width="241" height="103.503">
 								<title><?php bloginfo( 'name' ); ?></title>
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logotipo" />
 							</svg>
@@ -70,7 +73,22 @@
 
 						<?php get_template_part('partials/main-nav-top'); ?>
 					</div>
+
+					<!-- <div class="c-menu-lang">
+						<ul class="c-menu-lang__list">
+							<?php get_template_part('partials/main-lang-menu'); ?>
+						</ul>
+					</div> -->
 				</div>
 			</div>
 
 		</header>
+
+		<div class="c-whats">
+			<a href="#">
+				<svg width="98" height="98">
+					<title>whatsapp</title>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#whats" />
+				</svg>
+			</a>
+		</div>

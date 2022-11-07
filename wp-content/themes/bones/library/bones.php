@@ -273,8 +273,8 @@ function bones_page_navi() {
     'format'       => '',
     'current'      => max( 1, get_query_var('paged') ),
     'total'        => $wp_query->max_num_pages,
-    'prev_text'    => '<',
-    'next_text'    => '>',
+    'prev_text'    => '<svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-prev" /></svg>',
+    'next_text'    => '<svg width="32" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-next" /></svg>',
     'type'         => 'list',
     'end_size'     => 3,
     'mid_size'     => 3

@@ -6,14 +6,14 @@
   border: none;
   font-family: $font-primary;
   margin: 0;
-  padding: 0.87em 2.3em;
+  padding: 20px 30px;
   text-align: center;
   border-radius: 20px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
 
   &--primary {
-    font-size: 16px;
-    font-weight: bold;
-    background-color: $color-primary;
+    background-color: $color-secondary;
     color: $white;
 
     &:hover {
@@ -22,17 +22,22 @@
     }
   }
 
+  &--look {
+    cursor: not-allowed;
+    
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+
   &--submit {
-    width: 100%;
-    background: $color-primary;
-    height: 50px;
-    padding: 0;
-    border-radius: 25px;
-    font-weight: bold;
+    background: $color-secondary;
     color: $white;
+    order: 2;
     
     &:hover {
       background-color: $link-hover-color;
+      color: $white;
     }
 
     &:disabled:hover {
@@ -40,9 +45,14 @@
     }
   }
 
-  &__center {
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;
+  &--center {
+    display: table;
+    margin: 0 auto;
+  }
+
+  &--mt {
+    &-40 {
+      margin-top: 40px;
+    }
   }
 }
